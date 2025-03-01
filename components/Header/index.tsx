@@ -35,10 +35,11 @@ const Header = () => {
           : "bg-white"
       }`}
     >
-      <div className="relative  items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+      <div className="relative  items-center justify-between px-4 md:px-8 xl:flex 2xl:px-20">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-3xl font-bold">
-            <Image width={90} height={90} alt="" src="/logo.png"/>
+          <a href="/" className="flex items-center text-3xl font-bold">
+            <Image width={90} height={90} alt="" src="/logo.png" />
+            <span>Little Stars FC</span>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -137,7 +138,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-{/*
+          {/*
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
 
             <Link
