@@ -16,9 +16,6 @@ const Feature = () => {
             headerInfo={{
               title: "Players",
               subtitle: "Discover Our Players",
-              //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              // convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-              // ante in maximus.`,
             }}
           />
           {/* <!-- Section Title End --> */}

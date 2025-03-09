@@ -4,34 +4,72 @@ const featuresData: Feature[] = [
   {
     id: "1",
     icon: "/players/muta.jpg",
-    title: "Abdulmutalib",
-    description:
-      "FW",
+    title: "Abdulmudallib Abdullahi",
+    description: "FW",
+    trailer: "https://www.youtube.com/watch?v=ifnOK83n7kM&feature=youtu.be",
   },
   {
     id: "2",
     icon: "/players/tanimu.jpg",
     title: "Usman Tanimu",
-    description:
-      "MD",
+    description: "Defense",
+    dob: "12/28/2007",
+    weight: "56.9",
+    height: "1.63",
+    trailer: "https://www.youtube.com/watch?v=749jgRqhhH0&feature=youtu.be",
   },
   {
     id: "3",
-    icon: "players/abdulrahman.jpg",
+    icon: "/players/abdulrahman.jpg",
     title: "Abdulrahman Tanimu",
-    description:
-      "DF",
+    description: "Attacker",
+    dob: "01/23/2008",
+    weight: "62.7",
+    height: "1.46",
+    // trailer: "https://www.youtube.com/watch?v=749jgRqhhH0&feature=youtu.be",
   },
   {
     id: "4",
     icon: "/players/ishaq.jpg",
     title: "Umar Ishaq",
-    description:
-      "FW",
+    description: "FW",
   },
-  
-  
-  
+  {
+    id: "5",
+    icon: "/players/abdulaziz-ibrahim.jpeg",
+    title: "Abdulaziz Ibrahim",
+    description: "Attacker",
+    dob: "11/22/2008",
+    weight: "65.2",
+    height: "1.48",
+  },
+  {
+    id: "6",
+    icon: "/players/abdulsalam-isma’il.jpeg",
+    title: "Abdulsalam Isma’il",
+    description: "Mid Field",
+    dob: "04/01/2010",
+    weight: "60.5",
+    height: "1.49",
+  },
+  {
+    id: "7",
+    icon: "/players/jamilu-muhammad.jpeg",
+    title: "Jamilu Muhammad",
+    description: "Attacker",
+    dob: "07/15/2008",
+    weight: "55",
+    height: "1.53",
+  },
+  {
+    id: "8",
+    icon: "/players/ahmad-tanimu.jpeg",
+    title: "Ahmad Tanimu",
+    description: "FW",
+    dob: "12/05/2007",
+    weight: "65.0",
+    height: "1.52",
+  },
 ];
 
 export default featuresData;
