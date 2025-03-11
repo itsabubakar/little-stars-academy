@@ -18,29 +18,6 @@ const Hero = () => {
         <p className="text-lg lg:text-3xl">
           Discovering and developing young football talent
         </p>
-        <a
-          onClick={(e) => {
-            e.preventDefault();
-            const link = document.createElement("a");
-            link.href = "/consent-form.pdf";
-            link.download = "consent-form.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            setTimeout(() => {
-              window.location.href =
-                "https://ee.kobotoolbox.org/single/4ad1ab67b887bbb88646eda1b7008a98";
-            }, 1000);
-          }}
-          target="_blank"
-          // href="https://ee.kobotoolbox.org/single/4ad1ab67b887bbb88646eda1b7008a98"
-          className=" group inline-flex items-center gap-2.5 rounded-xl border  border-b p-2 text-white hover:border-primary hover:text-primary  "
-        >
-          <span className=" duration-300 group-hover:pr-2">Apply now</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
-            <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-          </svg>
-        </a>
       </div>
     </section>
   );

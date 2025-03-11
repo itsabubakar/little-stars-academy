@@ -9,6 +9,16 @@ const featuresData: Feature[] = [
     trailer: "https://www.youtube.com/watch?v=ifnOK83n7kM&feature=youtu.be",
   },
   {
+    id: "9",
+    icon: "/players/ibro.jpg",
+    title: "IBRAHIM BALA",
+    description: "Central Defense",
+    trailer: "https://www.youtube.com/watch?v=A6BosVpW-NQ&feature=youtu.be",
+    dob: "11/22/2008",
+    weight: "54.0",
+    height: "1.55",
+  },
+  {
     id: "2",
     icon: "/players/tanimu.jpg",
     title: "Usman Tanimu",
