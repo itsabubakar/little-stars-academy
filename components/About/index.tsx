@@ -133,19 +133,25 @@ const About = () => {
                 Launch Your SaaS Fast
               </h4> */}
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Building Future
+                Little Stars{" "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Talents
+                  Soccer Clinic
                 </span>
               </h2>
-              <p>Know more about our young talents</p>
+              <p>
+                Ignite your child's love for soccer at Little Stars Soccer
+                Clinic! Designed for ages 5-15, our program blends top-tier
+                coaching with a fun and inclusive atmosphere, helping kids
+                sharpen their skills, build confidence, and enjoy the beautiful
+                game.
+              </p>
               <div>
                 <Link
-                  href="/discover"
+                  href="/clinic"
                   className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
                 >
                   <span className="duration-300 group-hover:pr-2">
-                    Know More
+                    Apply now
                   </span>
                   <svg
                     width="14"
