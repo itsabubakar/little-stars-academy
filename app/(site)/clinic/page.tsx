@@ -6,7 +6,7 @@ const Page = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       full_name: "",
@@ -30,38 +30,36 @@ const Page = () => {
     },
   });
   const onSubmit = async (data: any) => {
-          
+    // e.preventDefault();
     try {
-        const response = await fetch('/api/send-mail', {
-          method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            
-            body: JSON.stringify({
-                to: 'abdulhamidusman218@gmail.com', // Replace with dynamic value if needed
-                subject: 'New Soccer Clinic Registration',
-                text: `New registration received:\n\n${Object.entries(data)
-                  .map(([key, value]) => `${key}: ${value}`)
-                  .join('\n')}`,
-            }),
-        });
+      const response = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-        const result = await response.json();
-        console.log(result);
+        body: JSON.stringify({
+          to: "littlestarsfootballltd@gmail.com", // Replace with dynamic value if needed
+          subject: "New Soccer Clinic Registration",
+          text: `New registration received:\n\n${Object.entries(data)
+            .map(([key, value]) => `${key}: ${value}`)
+            .join("\n")}`,
+        }),
+      });
 
-        if (!response.ok) {
-            throw new Error(result.error || 'Failed to send email');
-        }
+      const result = await response.json();
+      console.log(result);
 
-        alert('Email sent successfully!');
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send email");
+      }
+
+      alert("Application submitted successfully!");
     } catch (error) {
-        console.error('Error:', error);
-        alert('Error sending email');
+      console.error("Error:", error);
+      alert("Error sending email");
     }
-};
-
-
+  };
 
   return (
     <div className="flex justify-center py-20">
@@ -407,8 +405,9 @@ const Page = () => {
 
           {/* Submit Button */}
           <button
+            disabled={isSubmitting}
             type="submit"
-            className="mt-8 w-full rounded-xl bg-blue-500 py-2 font-semibold text-white hover:bg-blue-600"
+            className="mt-8 w-full rounded-xl bg-blue-500 py-2 font-semibold text-white hover:bg-blue-600 disabled:bg-blue-100"
           >
             Submit
           </button>
