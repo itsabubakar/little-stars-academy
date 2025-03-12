@@ -7,6 +7,7 @@ const Page = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm({
     defaultValues: {
       full_name: "",
@@ -48,6 +49,7 @@ const Page = () => {
       });
 
       const result = await response.json();
+      reset();
       console.log(result);
 
       if (!response.ok) {
