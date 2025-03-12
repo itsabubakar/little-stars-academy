@@ -29,10 +29,39 @@ const Page = () => {
       emergency_contact_two_phone: "",
     },
   });
+  const onSubmit = async (data: any) => {
+          
+    try {
+        const response = await fetch('/api/send-mail', {
+          method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            
+            body: JSON.stringify({
+                to: 'abdulhamidusman218@gmail.com', // Replace with dynamic value if needed
+                subject: 'New Soccer Clinic Registration',
+                text: `New registration received:\n\n${Object.entries(data)
+                  .map(([key, value]) => `${key}: ${value}`)
+                  .join('\n')}`,
+            }),
+        });
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+        const result = await response.json();
+        console.log(result);
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Failed to send email');
+        }
+
+        alert('Email sent successfully!');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error sending email');
+    }
+};
+
+
 
   return (
     <div className="flex justify-center py-20">
