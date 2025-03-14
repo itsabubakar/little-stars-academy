@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Dialog, Transition } from "@headlessui/react"; // Import Headless UI components
 
 const Page = () => {
   const {
@@ -30,15 +31,16 @@ const Page = () => {
       emergency_contact_two_phone: "",
     },
   });
+
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false); // State for modal visibility
+
   const onSubmit = async (data: any) => {
-    // e.preventDefault();
     try {
       const response = await fetch("/api/send-mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           to: "littlestarsfootballltd@gmail.com", // Replace with dynamic value if needed
           subject: "New Soccer Clinic Registration",
@@ -49,14 +51,15 @@ const Page = () => {
       });
 
       const result = await response.json();
-      reset();
       console.log(result);
 
       if (!response.ok) {
         throw new Error(result.error || "Failed to send email");
       }
 
-      alert("Application submitted successfully!");
+      // Show success modal
+      setIsSuccessModalOpen(true);
+      reset(); // Reset the form after successful submission
     } catch (error) {
       console.error("Error:", error);
       alert("Error sending email");
@@ -83,6 +86,35 @@ const Page = () => {
           confidence, and enjoy the beautiful game.
         </p>
 
+        {/* Consent Form Section */}
+        <div className="mt-8 rounded-lg bg-gray-100 p-6">
+          <h3 className="mb-4 text-xl font-semibold text-black">
+            Consent Form
+          </h3>
+          <p className="mb-4 text-lg">
+            Please download, print, and fill out the consent form below. Once
+            completed, submit it to our office either in person or via email.
+          </p>
+          <a
+            href="/path/to/consent-form.pdf" // Replace with the actual path to your PDF
+            download="Little_Stars_Soccer_Clinic_Consent_Form.pdf"
+            className="inline-block rounded-lg bg-blue-500 px-6 py-2 text-lg font-semibold text-white hover:bg-blue-600"
+          >
+            Download Consent Form
+          </a>
+          <p className="mt-4 text-sm text-gray-600">
+            If you have any questions, please contact us at{" "}
+            <a
+              href="mailto:littlestarsfootballltd@gmail.com"
+              className="text-blue-500 hover:underline"
+            >
+              littlestarsfootballltd@gmail.com
+            </a>
+            .
+          </p>
+        </div>
+
+        {/* Registration Form */}
         <form className="mt-8" onSubmit={handleSubmit(onSubmit)}>
           {/* Personal Information */}
           <div className="grid gap-y-4 lg:grid-cols-2 lg:gap-x-4">
@@ -407,13 +439,82 @@ const Page = () => {
 
           {/* Submit Button */}
           <button
+            onSubmit={handleSubmit(onSubmit)}
             disabled={isSubmitting}
             type="submit"
             className="mt-8 w-full rounded-xl bg-blue-500 py-2 font-semibold text-white hover:bg-blue-600 disabled:bg-blue-100"
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </form>
+
+        {/* Success Modal */}
+        <Transition appear show={isSuccessModalOpen} as={React.Fragment}>
+          <Dialog
+            as="div"
+            className="fixed inset-0 z-10 overflow-y-auto"
+            onClose={() => setIsSuccessModalOpen(false)}
+          >
+            <div className="min-h-screen px-4 text-center">
+              <Transition.Child
+                as={React.Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <Dialog
+                  onClose={() => setIsSuccessModalOpen(false)}
+                  className="fixed inset-0 bg-black bg-opacity-30"
+                />
+              </Transition.Child>
+
+              <span
+                className="inline-block h-screen align-middle"
+                aria-hidden="true"
+              >
+                &#8203;
+              </span>
+
+              <Transition.Child
+                as={React.Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <div className="my-8 inline-block w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium leading-6 text-gray-900"
+                  >
+                    Success!
+                  </Dialog.Title>
+                  <div className="mt-2">
+                    <p className="text-sm text-gray-500">
+                      Your registration has been successfully submitted. Thank
+                      you!
+                    </p>
+                  </div>
+
+                  <div className="mt-4">
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={() => setIsSuccessModalOpen(false)}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </Transition.Child>
+            </div>
+          </Dialog>
+        </Transition>
       </div>
     </div>
   );

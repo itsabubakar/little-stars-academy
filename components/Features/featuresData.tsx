@@ -11,7 +11,7 @@ const featuresData: Feature[] = [
   {
     id: "9",
     icon: "/players/ibro.jpg",
-    title: "IBRAHIM BALA",
+    title: "Ibrahim Bala",
     description: "Central Defense",
     trailer: "https://www.youtube.com/watch?v=A6BosVpW-NQ&feature=youtu.be",
     dob: "11/22/2008",
@@ -26,7 +26,7 @@ const featuresData: Feature[] = [
     dob: "12/28/2007",
     weight: "56.9",
     height: "1.63",
-    trailer: "https://www.youtube.com/watch?v=749jgRqhhH0&feature=youtu.be",
+    trailer: "https://www.youtube.com/watch?v=2JYARPlQpeE&feature=youtu.be",
   },
   {
     id: "3",
