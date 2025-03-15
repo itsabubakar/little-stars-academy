@@ -93,17 +93,17 @@ const Page = () => {
           </h3>
           <p className="mb-4 text-lg">
             Please download, print, and fill out the consent form below. Once
-            completed, submit it to our office either in person or via email.
+            completed, submit it to our office No 3A Ali Akilu Road, Kaduna.
           </p>
           <a
-            href="/path/to/consent-form.pdf" // Replace with the actual path to your PDF
+            href="/consent-form.pdf" // Replace with the actual path to your PDF
             download="Little_Stars_Soccer_Clinic_Consent_Form.pdf"
             className="inline-block rounded-lg bg-blue-500 px-6 py-2 text-lg font-semibold text-white hover:bg-blue-600"
           >
             Download Consent Form
           </a>
           <p className="mt-4 text-sm text-gray-600">
-            If you have any questions, please contact us at{" "}
+            If you have any questions, please contact us at 09115099135 or{" "}
             <a
               href="mailto:littlestarsfootballltd@gmail.com"
               className="text-blue-500 hover:underline"
