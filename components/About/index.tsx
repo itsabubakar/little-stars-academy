@@ -6,8 +6,38 @@ import Link from "next/link";
 import ReactPlayer from "react-player";
 
 const About = () => {
+  const videoUrl = "";
+
+  const handleClick = () => {
+    window.open(
+      "https://youtube.com/@littlestarsfootballacad?si=yA86pNXXHenXJTIb",
+      "_blank",
+    );
+  };
   return (
     <>
+      <div className="mx-auto max-w-c-1235 overflow-hidden px-4 pb-20 md:px-8 2xl:px-0">
+        <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
+          <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
+            Little Stars Football Academy -
+          </span>
+          In Videos
+        </h2>
+        <a
+          href="https://youtube.com/@littlestarsfootballacad?si=yA86pNXXHenXJTIb"
+          target="_blank"
+          style={{ cursor: "pointer" }}
+        >
+          <ReactPlayer
+            width={"100%"}
+            height={500}
+            url={"https://youtu.be/A6BosVpW-NQ"}
+            playing={false}
+            controls={false} // Disable controls to prevent interference
+            light={true} // Show a thumbnail instead of playing
+          />
+        </a>
+      </div>
       {/* <!-- ===== About Start ===== --> */}
       <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
@@ -106,21 +136,6 @@ const About = () => {
         </div>
       </section>
       {/* <!-- ===== About End ===== --> */}
-
-      <div className="mx-auto max-w-c-1235 overflow-hidden px-4 pb-20 md:px-8 2xl:px-0">
-        <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-          <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-            Little Stars Football Academy -
-          </span>
-          In Videos
-        </h2>
-        <ReactPlayer
-          width={"100%"}
-          height={500}
-          url={"https://youtu.be/A6BosVpW-NQ"}
-          controls
-        />
-      </div>
 
       {/* <!-- ===== About Two Start ===== --> */}
       <section>
