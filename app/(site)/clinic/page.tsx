@@ -93,7 +93,8 @@ const Page = () => {
           </h3>
           <p className="mb-4 text-lg">
             Please download, print, and fill out the consent form below. Once
-            completed, submit it to our office No 3A Ali Akilu Road, Kaduna.
+            completed, submit it to our office at Abdullahi Yaro House,No 3A Ali
+            Akilu Road, Kaduna.
           </p>
           <a
             href="/consent-form.pdf" // Replace with the actual path to your PDF
