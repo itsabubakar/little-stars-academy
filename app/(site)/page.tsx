@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Little Stars Football Academy",
 
   // other metadata
-  description: "This is Home for Solid Pro",
+  description: "This is Little Stars Football Academy",
 };
 
 export default function Home() {
@@ -18,7 +18,6 @@ export default function Home() {
     <main>
       <Hero />
       <Feature />
-
       <About />
       <FunFact />
       <Contact />

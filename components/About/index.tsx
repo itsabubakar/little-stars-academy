@@ -98,39 +98,6 @@ const About = () => {
                 learn the fundamentals of football while fostering a passion for
                 the game.
               </p>
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  const link = document.createElement("a");
-                  link.href = "/consent-form.pdf";
-                  link.download = "consent-form.pdf";
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                  setTimeout(() => {
-                    window.location.href =
-                      "https://ee.kobotoolbox.org/single/4ad1ab67b887bbb88646eda1b7008a98";
-                  }, 1000);
-                }}
-                target="_blank"
-                className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
-              >
-                <span className="duration-300 group-hover:pr-2">
-                  {" "}
-                  Apply now
-                </span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
             </motion.div>
           </div>
         </div>
@@ -174,26 +141,9 @@ const About = () => {
                 Clinic! Designed for ages 5-15, our program blends top-tier
                 coaching with a fun and inclusive atmosphere, helping kids
                 sharpen their skills, build confidence, and enjoy the beautiful
-                game.
+                game. Applications currently closed!
               </p>
-              <div>
-                <Link
-                  href="/clinic"
-                  className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
-                >
-                  <span className="duration-300 group-hover:pr-2">
-                    Apply now
-                  </span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="currentColor"
-                  >
-                    <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-                  </svg>
-                </Link>
-              </div>
+              <div></div>
             </motion.div>
             <motion.div
               variants={{
