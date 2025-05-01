@@ -47,7 +47,7 @@ export default function Player({ feature }: { feature?: Feature }) {
             <FaCakeCandles />
           </div>
           <div className="text-center md:text-start">
-            <p className="text-lg">Height (cm)</p>
+            <p className="text-lg">Height (m)</p>
             <p className="text-sm">{feature?.height} </p>
           </div>
         </div>

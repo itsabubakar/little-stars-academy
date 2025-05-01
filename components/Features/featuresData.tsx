@@ -5,8 +5,11 @@ const featuresData: Feature[] = [
     id: "1",
     icon: "/players/muta.jpg",
     title: "Abdulmudallib Abdullahi",
-    description: "FW",
+    description: "Attacking Midfielder",
     trailer: "https://www.youtube.com/watch?v=ifnOK83n7kM&feature=youtu.be",
+    dob: "01/23/2007",
+    weight: "56",
+    height: "1.75",
   },
   {
     id: "9",
@@ -42,7 +45,7 @@ const featuresData: Feature[] = [
     id: "4",
     icon: "/players/ishaq.jpg",
     title: "Umar Ishaq",
-    description: "FW",
+    description: "Attacker",
   },
   {
     id: "5",
