@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import ReactPlayer from "react-player";
 
 export default function About() {
@@ -13,6 +14,9 @@ export default function About() {
         </div>
       </section>
       <section className="flex flex-col gap-5 px-5 py-10 md:px-10 lg:px-24">
+        <h2 className="py-5 text-center text-3xl font-medium tracking-tight sm:text-4xl">
+          The Clinic in Videos
+        </h2>
         <div className="flex flex-wrap gap-5 ">
           <div>
             <ReactPlayer
@@ -68,6 +72,61 @@ export default function About() {
             />
             <h2 className="pt-2 font-semibold text-black">Day 6</h2>
           </div>
+        </div>
+      </section>
+      <section className="flex flex-col gap-5 px-5 pb-10 md:px-10 lg:px-24">
+        <h2 className="py-5 text-center text-3xl font-medium tracking-tight sm:text-4xl">
+          The Clinic in Pictures
+        </h2>
+        <div className="flex flex-wrap justify-center gap-5 ">
+          <Image
+            src="/clinic/clinic-1.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-2.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-3.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-4.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-5.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-6.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-7.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
+          <Image
+            src="/clinic/clinic-8.jpg"
+            alt="player"
+            width={300}
+            height={300}
+          />
         </div>
       </section>
     </div>
